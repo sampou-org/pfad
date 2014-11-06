@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 .structure {
     margin: 0 auto;
     border-right: 1px solid #c99;
@@ -88,6 +89,10 @@ div#header h1 a:visited {
 
 div#lastupdate {
     padding-bottom: 5px;
+}
+
+div#navigation ul li {
+    font-size: 80%;
 }
 
 div.code {
