@@ -2,15 +2,14 @@
 
 module Main where
 
-import           Data.Monoid (mappend)
-import           Hakyll
+import Hakyll
 
 main :: IO ()
 main =  hakyllWith config $ do
   match "css/*" $ do
     route idRoute
     compile compressCssCompiler
-  match (fromList $ ["index.md","comment.md","errata.md"] ++ chaps) $ do
+  match (fromList $ ["index.md","errata.md"] ++ chaps) $ do
     route   $ setExtension "html"
     compile $ pandocCompiler
       >>= loadAndApplyTemplate "templates/default.html" defaultContext
@@ -21,6 +20,7 @@ config = defaultConfiguration
        { deployCommand = "cabal run deploy"
        }
 
+chaps :: [Identifier]
 chaps = ["chap01.md"
         ,"chap02.md"
         ,"chap03.md"
