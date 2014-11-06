@@ -1,0 +1,106 @@
+@charset "UTF-8";
+.structure {
+    margin: 0 auto;
+    border-right: 1px solid #c99;
+    border-left: 1px solid #c99;
+    background-color: #d8d0b8;
+    color: #500000;
+}
+
+#header {
+    position: relative;
+    padding: 20px 0px 20px 20px;
+    color: #fcfff9;
+    background-color: #006400;
+}
+
+div#header h1 {
+    padding-left: 60px;
+    text-align: left;
+}
+
+#primary-contents {
+    float: left;
+    margin-right: -300px;
+    width:100%;
+    padding-bottom: 32767px;
+    margin-bottom: -32767px
+}
+
+#box {
+    margin-right: 300px;
+    margin-left: 10px;
+}
+
+#secondary-contents {
+    float: right;
+    width: 270px;
+    padding: 10px;
+    margin-left: 10px;
+    background-color: #669b4d;
+    background-color: #7aad25;
+    padding-bottom: 32767px;
+    margin-bottom: -32767px;
+}
+
+#container {
+    overflow: hidden;
+}
+
+* html #container {
+    // IE 6 zoom:1
+}
+
+div#footer {
+    text-align: center;
+    padding: 15px;
+    clear: both;
+    font-size: 110%;
+    color: #fcfff9;
+    background-color: #006400;
+}
+
+a {
+    text-decoration: none;
+}
+
+div#secondary-contents a:link {
+    color: #dbff96;
+}
+
+div#secondary-contents a:visited {
+    color: #85e284;
+}
+
+div#secondary-contents a:active {
+    color: #bcf8e9;
+}
+
+div#header h1 a:link {
+    color: #fcfff9;
+    text-decoration: none;
+}
+
+div#header h1 a:visited {
+    color: #fcfff9;
+    text-decoration: none;
+}
+
+div#lastupdate {
+    padding-bottom: 5px;
+}
+
+div.code {
+    border: solid 1px orange;
+    padding: 5px;
+}
+
+pre.spec {
+    border:solid 1px;
+    padding:5px;
+}
+
+pre.sample {
+    border:solid 1px;
+    padding:5px;
+}
