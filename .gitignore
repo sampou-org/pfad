@@ -1,9 +1,13 @@
-dist
+dist/
+_cache/
+_site/
+*~
 *.o
 *.hi
 *.chi
 *.chs.h
 .virtualenv
 .hsenv
-.cabal-sandbox.config
-.cabal.config
+.cabal-sandbox/
+cabal.sandbox.config
+.shelly/
