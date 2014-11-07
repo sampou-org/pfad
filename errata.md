@@ -24,5 +24,13 @@ date: 2014-11-07
    </td>
   </tr>
 -->
+  <tr>
+   <td>2014/11/07</td>
+   <td>p.59 L.7 等式(10.4)右辺</td>
+   <td>
+    誤：init us ++ ...<br>
+    正：inits us ++ ...
+   </td>
+  </tr>
  </tbody>
 </table>
