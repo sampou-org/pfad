@@ -14,6 +14,7 @@ main =  hakyllWith config $ do
     compile $ pandocCompiler
       >>= loadAndApplyTemplate "templates/default.html" defaultContext
       >>= relativizeUrls
+  match "templates/*" $ compile templateCompiler
 
 config :: Configuration
 config = defaultConfiguration
