@@ -22,26 +22,31 @@ div#header h1 {
 
 #primary-contents {
     float: left;
-    margin-right: -300px;
+    margin-right: -340px;
     width:100%;
+    padding-right: 10px;
     padding-bottom: 32767px;
-    margin-bottom: -32767px
+    margin-bottom: -32767px;
 }
 
 #box {
-    margin-right: 300px;
+    margin-right: 330px;
     margin-left: 10px;
 }
 
 #secondary-contents {
     float: right;
-    width: 270px;
+    width: 300px;
     padding: 10px;
     margin-left: 10px;
     background-color: #669b4d;
     background-color: #7aad25;
     padding-bottom: 32767px;
     margin-bottom: -32767px;
+}
+
+div#navigation {
+    font-size: 70%;
 }
 
 #container {
@@ -89,10 +94,6 @@ div#header h1 a:visited {
 
 div#lastupdate {
     padding-bottom: 5px;
-}
-
-div#navigation ul li {
-    font-size: 80%;
 }
 
 div.code {
