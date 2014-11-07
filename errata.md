@@ -26,10 +26,10 @@ date: 2014-11-07
 -->
   <tr>
    <td>2014/11/07</td>
-   <td>p.59 L.7 等式(10.4)右辺</td>
+   <td>p.59 L.7</td>
    <td>
-    誤：init us ++ ...
-    正：inits us ++ ...
+    誤：... = init us ++ ...
+    正：... = inits us ++ ...
    </td>
   </tr>
  </tbody>
