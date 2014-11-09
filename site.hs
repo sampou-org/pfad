@@ -9,6 +9,9 @@ main =  hakyllWith config $ do
   match "css/*" $ do
     route idRoute
     compile compressCssCompiler
+  match "js/*" $ do
+    route idRoute
+    compile copyFileCompiler
   match (fromList $ ["index.md","errata.md"] ++ chaps) $ do
     route   $ setExtension "html"
     compile $ pandocCompiler
