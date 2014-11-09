@@ -34,3 +34,11 @@ date: 2014-11-07
   </tr>
  </tbody>
 </table>
+
+<script type="text/javascript">
+  $(document).ready(function()
+       {
+           $("#errata").tablesorter();
+       }
+  );
+</script>

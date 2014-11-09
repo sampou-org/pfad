@@ -31,6 +31,11 @@ main = shelly $ do
     t <- toTextWarn file
     git_ "add" [t]
 
+  files <- findWhen test_f "js"
+  forM_ files $ \file -> do
+    t <- toTextWarn file
+    git_ "add" [t]
+
   git_ "commit" ["-m", "update"]
   git_ "push" []
   
