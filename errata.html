@@ -7,13 +7,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <script type="text/javascript" src="js/jquerry-latest.js"></script>
 <script type="text/javascript" src="js/jquerry.tablesorter.min.js"></script>
-<script type="text/javascript">
-  $(document).ready(function()
-       {
-           $("#errata").tablesorter();
-       }
-  );
-</script>
+<script type="text/javascript" src="js/errata.js"></script>
 <title>正誤表</title>
 </head>
 <body>
@@ -23,7 +17,14 @@
 <div class="structure" id="container">
   <div id="primary-contents">
     <div id="box">
-      <h2 id="正誤表">正誤表</h2>
+      <script type="text/javascript">
+  $$(document).ready(function()
+       {
+           $$("#errata").tablesorter();
+       }
+  );
+</script>
+<h2 id="正誤表">正誤表</h2>
 <table id="errata" class="tablesorter">
 <thead>
 <tr>
