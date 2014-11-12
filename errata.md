@@ -1,6 +1,6 @@
 ---
 title: 正誤表
-date: 2014-11-08
+date: 2014-11-11
 ---
 
 ## 正誤表
@@ -10,7 +10,7 @@ date: 2014-11-08
   <tr>
    <th>報告日</th>
    <th>ページ</th>
-   <th class="{sorter: false}">内容</th>
+   <th>内容</th>
   </tr>
  </thead>
  <tbody>
