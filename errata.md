@@ -46,7 +46,7 @@ date: 2014-11-11
 <script type="text/javascript">
   $(document).ready(function()
        {
-           $("#errata").tablesorter();
+           $("#errata").tablesorter( {sortList: [[0,0],[1,0]]} );
        }
   );
 </script>
