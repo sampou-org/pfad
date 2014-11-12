@@ -2,6 +2,13 @@
 title: 正誤表
 date: 2014-11-11
 ---
+<script type="text/javascript">
+  $$(document).ready(function()
+       {
+           $$("#errata").tablesorter();
+       }
+  );
+</script>
 
 ## 正誤表
 
