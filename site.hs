@@ -6,10 +6,10 @@ import Hakyll
 
 main :: IO ()
 main =  hakyllWith config $ do
-  match "css/*" $ do
+  match "css/*.css" $ do
     route idRoute
     compile compressCssCompiler
-  match "js/*" $ do
+  match "js/*.js" $ do
     route idRoute
     compile copyFileCompiler
   match (fromList $ ["index.md","errata.md"] ++ chaps) $ do
