@@ -1,6 +1,6 @@
-$(document).ready(function()
+$(function()
      {
-         $("#errata").tablesorter();
+         $("#errata").tablesorter({headers: {3: {sorter: false}}});
      }
 );
 
