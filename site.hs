@@ -6,9 +6,9 @@ import Hakyll
 
 main :: IO ()
 main =  hakyllWith config $ do
-  match "css/*.css" $ do
+  match "css/*" $ do
     route idRoute
-    compile compressCssCompiler
+    compile copyFileCompiler
   match "js/*.js" $ do
     route idRoute
     compile copyFileCompiler
