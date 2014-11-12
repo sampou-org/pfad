@@ -5,6 +5,14 @@ date: 2014-11-11
 
 ## 正誤表
 
+<script type="text/javascript">
+  $(document).ready(function()
+       {
+           $("#errata").tablesorter();
+       }
+  );
+</script>
+
 <table id="errata" class="tablesorter">
  <thead>
   <tr>
@@ -42,11 +50,3 @@ date: 2014-11-11
   </tr>
  </tbody>
 </table>
-
-<script type="text/javascript">
-  $(document).ready(function()
-       {
-           $("#errata").tablesorter();
-       }
-  );
-</script>
