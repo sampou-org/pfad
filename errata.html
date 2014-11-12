@@ -6,8 +6,8 @@
 <link rel="stylesheet" type="text/css" href="css/syntax.css">
 <link rel="stylesheet" type="text/css" href="css/errata.css">
 <link rel="stylesheet" type="text/css" href="css/themes/blue/style.css">
-<script src="js/jquerry-latest.js" type="text/javascript"></script>
-<script src="js/jquerry.tablesorter.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquerry-latest.js"></script>
+<script type="text/javascript" src="js/jquerry.tablesorter.min.js"></script>
 <title>正誤表</title>
 </head>
 <body>
@@ -72,7 +72,7 @@ p.59 L.7
 <script type="text/javascript">
   $(document).ready(function()
        {
-           $("#errata").tablesorter( {sortList: [[0,0],[1,0]]} );
+           $("#errata").tablesorter();
        }
   );
 </script>
