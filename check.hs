@@ -11,6 +11,9 @@ default (T.Text)
 git_ :: T.Text -> [T.Text] -> Sh ()
 git_ = command1_ "git" []
 
+git' :: T.Text -> [T.Text] -> Sh T.Text
+git' = command1 "git" []
+
 exmsg :: T.Text
 exmsg = "Already up-to-date"
 
@@ -20,9 +23,8 @@ len = T.length exmsg
 main :: IO ()
 main = shelly $ do
   git_ "checkout" ["master"]
-  git_ "pull" ["origin","master"]
-  msg <- lastStderr
-  if exmsg == T.take len msg then return () else deploy
+  msg <- git' "pull" []
+  if T.take len msg == exmsg then return () else deploy
 
 deploy :: Sh ()
 deploy = do
