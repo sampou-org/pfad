@@ -1,5 +1,5 @@
 name:                   pfad
-version:                1.0.0.0
+version:                1.1.0.0
 synopsis:               http://pfad.sampou.org/
 description:            http://pfad.sampou.org/
 license:                BSD3
@@ -21,6 +21,13 @@ executable pfad
 
 executable deploy
   main-is:                deploy.hs
+  build-depends:          base >= 4.6
+                        , shelly >= 1.5
+                        , text >= 1.1
+  default-language:       Haskell2010
+
+executable check
+  main-is:                check.hs
   build-depends:          base >= 4.6
                         , shelly >= 1.5
                         , text >= 1.1
