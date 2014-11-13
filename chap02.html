@@ -21,12 +21,24 @@ $(function() {
 <div class="structure" id="container">
   <div id="primary-contents">
     <div id="box">
-      
+      <h3 id="分割統治法">分割統治法</h3>
+<h4 id="tableの定義より-d-tcount-x-tys">tableの定義より d ≤ tcount x tys′</h4>
+<p>後で書く。</p>
+<h4 id="よりtcount-x-tys-tcount-x-tys-である">(2.1) よりtcount x tys = tcount x tys′ である</h4>
+<pre><code>tcount x tys
+= {- (2.1) -}
+length (dropWhile ((x &gt;=) . fst) tys)
+= {- tys = (y,d): tys' -}
+length (dropWhile ((x &gt;=) . fst) ((y,d): tys'))
+= {- ここでは x = y のケースで考えているので x &gt;= fst (y,d) -}
+length (dropWhile ((x &gt;=) . fst) tys')
+= {- (2.1) -}
+tcount x tys′</code></pre>
     </div>
   </div>
   <div id="secondary-contents">
     <div id="navigation">
-      Last update: 2014-11-07 <br>
+      Last update: 2014-11-13 <br>
       <a href="index.html">HOME</a><br>
       <a href="errata.html">正誤表</a>
       <ol>
