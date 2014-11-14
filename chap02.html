@@ -23,7 +23,53 @@ $(function() {
     <div id="box">
       <h3 id="分割統治法">分割統治法</h3>
 <h4 id="tableの定義より-d-tcount-x-tys">tableの定義より d ≤ tcount x tys′</h4>
-<p>後で書く。</p>
+<p>準備として二つの事実を示しておく。</p>
+<p>まず一つめ、</p>
+<pre><code>tcount x (table ys) = length (filter (x&lt;) ys)</code></pre>
+<p>なぜなら</p>
+<pre><code>tcount x (table ys)
+= {- (2.1) -}
+length (dropWhile ((x&gt;=) . fst) (table ys))
+= {- table -}
+length (dropWhile ((x&gt;=) . fst) (sort [(z, scount z zs) | z:zs &lt;- tails ys]))
+= {- sort したものを (x&gt;=) で dropWhile すると残るのは (x&lt;) なものだけなので -}
+length (filter ((x&lt;) . fst) (sort [(z, scount z zs) | z:zs &lt;- tails ys]))
+= {- length . filter p . sort = length . filter p だから -}
+length (filter ((x&lt;) . fst) [(z, scount z zs) | z:zs &lt;- tais ys])
+= {- length . filter (p . f) = length . filter p . map f だから -}
+length (filter ((x&lt;)) (map fst [(z, scount z zs) | z:zs &lt;- tails ys]))
+=
+length (filter ((x&lt;)) [z | z:zs &lt;- tails ys])
+= {- [z | z:zs &lt;- tails ys] = ys だから -}
+length (filter ((x&lt;)) ys)</code></pre>
+<p>二つめ、</p>
+<pre><code>table ys = (y,d): tys' とする。
+ys から y を一つ削除したものを ys' とすると tys' = table ys'。
+（ys に要素が y と等しいものが複数あるときはその中でも一番右にあるものを削除。）</code></pre>
+<p>なぜなら</p>
+<pre><code>[(z, scount z zs) | z:zs &lt;- tails ys] と [(z, scount z zs) | z:zs &lt;- tails ys'] を比べると
+y は ys の中で最小なので y が削除されていても scount z zs に影響を与えない。
+結局違いは (y,d) があるかないかだけの違いになる。したがって
+sort [(z, scount z zs) | z:zs &lt;- tails ys] = (y,d): sort [(z, scount z zs) | z:zs &lt;- tails ys']
+つまり
+table ys = (y,d): table ys'</code></pre>
+<p>準備ができたので本題に入る。</p>
+<p>tys@((y,d): tys’ = table ys とする。 上で述べた準備の二つめから tys’ = table ys’ と書ける。ここで ys’ は ys から y を一つ削除したもの。</p>
+<pre><code>d
+= {- table の作られ方より -}
+scount y zs （ここで y: zs ∈ tails ys）
+= {- scount の定義 -}
+length (filter (y&lt;) zs)
+&lt;= {- zs は ys の部分列だから -}
+length (filter (y&lt;) ys)
+= {- ys と ys' の違いは一つの y だけなので -}
+length (filter (y&lt;) ys')
+= {- 上で述べた準備の一つめより -}
+tcount y (table ys')
+= {- tys' = table ys' -}
+tcount y tys'
+= {- ここでは x = y のケースで考えているから -}
+tcount x tys'</code></pre>
 <h4 id="よりtcount-x-tys-tcount-x-tys-である">(2.1) よりtcount x tys = tcount x tys′ である</h4>
 <pre><code>tcount x tys
 = {- (2.1) -}
@@ -38,7 +84,7 @@ tcount x tys′</code></pre>
   </div>
   <div id="secondary-contents">
     <div id="navigation">
-      Last update: 2014-11-13 <br>
+      Last update: 2014-11-14 <br>
       <a href="index.html">HOME</a><br>
       <a href="errata.html">正誤表</a>
       <ol>
