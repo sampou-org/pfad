@@ -1,7 +1,7 @@
 language: haskell
 ghc: 7.8
 install:
-  - cabal install --only-dependecies
+  - cabal install --only-dependencies
 script: 
   - cabal run deploy
 notifications:
