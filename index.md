@@ -13,7 +13,6 @@ date: 2014-11-14
 
 <a href="http://www.amazon.co.jp/gp/product/0521513383/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=0521513383&linkCode=as2&tag=philoprogramm-22"><img border="0" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0521513383&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=philoprogramm-22" ></a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=philoprogramm-22&l=as2&o=9&a=0521513383" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
-
 ## 質問・感想・誤りの指摘などについて
 
 この翻訳書の内容に関するご質問，ご感想，誤りのご指摘などございましたら，
