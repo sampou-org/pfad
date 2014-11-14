@@ -1,0 +1,9 @@
+language: haskell
+ghc: 7.8
+install:
+  - cabal install --only-dependecies
+script: 
+  - cabal run deploy
+notifications:
+  email:
+    nobsun@gmail.com
