@@ -19,7 +19,7 @@ date: 2014-11-16
    <td></td>
    <td>2014/11/11</td>
    <td>
-    誤：<br>
+    誤：
     正：
    </td>
   </tr>
@@ -46,6 +46,14 @@ date: 2014-11-16
    <td>
     誤：なっていば
     正：なっていれば
+   </td>
+  </tr>
+  <tr>
+   <td>p.199 L.-6</td>
+   <td>2014/11/11</td>
+   <td>
+    誤： encode3' m ei xs
+    正： encode3' m (n,(l,r)) (x:xs)
    </td>
   </tr>
  </tbody>
