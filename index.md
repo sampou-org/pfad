@@ -1,6 +1,6 @@
 ---
 title: 関数プログラミング 珠玉のアルゴリズムデザイン
-date: 2014-11-14
+date: 2014-11-16
 ---
 
 ## このサイトについて
@@ -8,10 +8,15 @@ date: 2014-11-14
 このサイトは2014年11月にオーム社より発刊されました<a href="http://www.amazon.co.jp/gp/product/4274050645/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=4274050645&linkCode=as2&tag=philoprogramm-22">『関数プログラミング 珠玉のアルゴリズムデザイン』</a>を楽しむためのサポートサイトです．
 
 <a href="http://www.amazon.co.jp/gp/product/4274050645/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=4274050645&linkCode=as2&tag=philoprogramm-22"><img border="0" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4274050645&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=philoprogramm-22" ></a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=philoprogramm-22&l=as2&o=9&a=4274050645" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a href="http://www.amazon.co.jp/gp/product/0521513383/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=0521513383&linkCode=as2&tag=philoprogramm-22"><img border="0" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0521513383&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=philoprogramm-22" ></a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=philoprogramm-22&l=as2&o=9&a=0521513383" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
 原書カバーの Puzzle no. 234 は ALGORITHM の 9 文字を使った Sudoku パズルになっています．
 
-<a href="http://www.amazon.co.jp/gp/product/0521513383/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=0521513383&linkCode=as2&tag=philoprogramm-22"><img border="0" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0521513383&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=philoprogramm-22" ></a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=philoprogramm-22&l=as2&o=9&a=0521513383" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+## 関連記事
+
+読書メモなどを書いていただいた記事など，見つけたもの，教えてもらったもの．
+
+- [【随時追記予定】読書メモ：関数プログラミング 珠玉のアルゴリズムデザイン](http://xenophobia.hatenablog.com/entry/2014/11/15/031820)
 
 ## 質問・感想・誤りの指摘などについて
 
