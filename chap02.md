@@ -86,3 +86,8 @@ length (dropWhile ((x >=) . fst) tys')
 tcount x tys′
 ```
 
+### 所見
+
+#### table xsの提供する情報はxsの並べ換えのうち整列されているものを決定できるほどのものになるからである
+
+後で書く。
