@@ -5,7 +5,8 @@ date: 2014-11-18
 
 ## 正誤表
 
-<table id="errata" class="tablesorter">
+以下は2刷で修正
+<table id="errata1" class="tablesorter">
  <thead>
   <tr>
    <th>ページ</th>
