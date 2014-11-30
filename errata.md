@@ -4,9 +4,7 @@ date: 2014-11-28
 ---
 
 ## 正誤表
-
-以下は2刷で修正
-<table id="errata1" class="tablesorter">
+<table id="errata2" class="tablesorter">
  <thead>
   <tr>
    <th>ページ</th>
@@ -26,19 +24,32 @@ date: 2014-11-28
   </tr>
 -->
   <tr>
-   <td>p.059 L.07</td>
-   <td>2014/11/07</td>
-   <td>
-    誤：... = init us ++ ...
-    正：... = inits us ++ ...
-   </td>
-  </tr>
-  <tr>
    <td>p.065 L.-06</td>
    <td>2014/11/28</td>
    <td>
     誤：step N True = M
     正：step N True = N
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+以下は2刷で修正
+<table id="errata1" class="tablesorter">
+ <thead>
+  <tr>
+   <th>ページ</th>
+   <th>報告日</th>
+   <th>内容</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>p.059 L.07</td>
+   <td>2014/11/07</td>
+   <td>
+    誤：... = init us ++ ...
+    正：... = inits us ++ ...
    </td>
   </tr>
   <tr>
