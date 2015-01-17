@@ -1,6 +1,6 @@
 ---
 title: 正誤表
-date: 2015-01-06
+date: 2015-01-17
 ---
 
 ## 正誤表
@@ -16,13 +16,21 @@ date: 2015-01-06
 <!--
   <tr>
    <td></td>
-   <td>2014/11/28</td>
+   <td>2015/01/17</td>
    <td>
     誤：
     正：
    </td>
   </tr>
 -->
+  <tr>
+   <td>p.133 L.-10</td>
+   <td>2015/01/11</td>
+   <td>
+    誤：Matrix Choicies -> [Grid]
+    正：Matrix Choices -> [Grid]
+   </td>
+  </tr>
   <tr>
    <td>p.132 L.-02,L.-01</td>
    <td>2015/01/06</td>
