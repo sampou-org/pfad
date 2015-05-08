@@ -1,6 +1,6 @@
 ---
 title: 関数プログラミング 珠玉のアルゴリズムデザイン
-date: 2015-01-17
+date: 2015-05-09
 ---
 
 ## このサイトについて
@@ -18,8 +18,6 @@ date: 2015-01-17
 
 - [【随時追記予定】読書メモ：関数プログラミング 珠玉のアルゴリズムデザイン](http://xenophobia.hatenablog.com/entry/2014/11/15/031820)
 - [「関数プログラミング 珠玉のアルゴリズムデザイン」をScalaで実装してみる まとめ](http://qiita.com/qtamaki@github/items/176b4332da8e1e481fad)
-    - [「関数プログラミング 珠玉のアルゴリズムデザイン」をScalaで実装してみる](http://qtamaki.hatenablog.com/entry/2014/12/14/063748)
-    - [「関数プログラミング 珠玉のアルゴリズムデザイン」をScalaで実装してみる 第２章](http://qtamaki.hatenablog.com/entry/2014/12/22/145634)
 - [珠玉のアルゴリズムデザイン１９章の数独ソルバー読みました](http://nihemak.hatenablog.com/entry/2015/01/11/210124)
 
 ## 質問・感想・誤りの指摘などについて

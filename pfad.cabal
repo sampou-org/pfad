@@ -1,12 +1,12 @@
 name:                   pfad
-version:                1.2.1.0
+version:                1.2.2
 synopsis:               http://pfad.sampou.org/
 description:            http://pfad.sampou.org/
 license:                BSD3
 license-file:           LICENSE
 author:                 Nobuo Yamashita
 maintainer:             nobsun@sampou.org
-copyright:              (c) Hideyuki Tanaka
+copyright:              (c) Noubo Yamashita
 category:               Web
 build-type:             Simple
 cabal-version:          >=1.16
