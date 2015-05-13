@@ -3,7 +3,7 @@ title: 06. 小町算
 date: 2015-05-13
 ---
 
-#### 小さな理論
+### 小さな理論
 
 #### 2つの運算を合わせて、以下に到達する
 
@@ -44,6 +44,8 @@ solutions = map fst . filter (goot . snd) . candidates
 ```
 solutions = map fst . filter (goot . snd) . foldr expand []
 ```
+
+### 小町算
 
 #### modify x (k,f,t,e) = [(10*k,k*x+f,t,e), (10,x,f*t,e),(10,x,1,f*t+e)]
 
