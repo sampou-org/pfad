@@ -23,18 +23,12 @@ $(function() {
 <div class="structure" id="container">
   <div id="primary-contents">
     <div id="box">
-      <h4 id="小さな理論">小さな理論</h4>
+      <h3 id="小さな理論">小さな理論</h3>
 <h4 id="つの運算を合わせて以下に到達する">2つの運算を合わせて、以下に到達する</h4>
 <pre><code>map (fork (id,value)) . extend' x
 = { 2つの運算を合わせて }
-filter (ok . snd) . zip . cross (extend x, modify x) . fork (map id, map value)
-= { id 挿入 }
-filter (ok . snd) . zip . cross (extend x, modify x) . id . fork (map id, map value)
-= { id = unzip . zip }
-filter (ok . snd) . zip . cross (extend x, modify x) . unzip . zip . fork (map id, map value)
+filter (ok . snd) . zip . cross (extend x, modify x) . unzip . map (fork (id,value))
 = { expand x = filter (ok . snd) . zip . cross (extend x, modify x) . unzip とおく }
-expand x . zip . fork (map id, map value)
-= { (6.9) }
 expand x . map (fork (id,value))</code></pre>
 <p>これで31ページ上の「以下を満たす expand を求めなければならない」の</p>
 <pre><code>map (fork (id,value)) . extend' x = expand x . map (fork (id,value))</code></pre>
@@ -42,11 +36,31 @@ expand x . map (fork (id,value))</code></pre>
 <pre><code>candidates = foldr expand []</code></pre>
 <p>である。</p>
 <p>一方、29ページ中の</p>
-<pre><code>solutions = filter (goot . value) . candidates</code></pre>
+<pre><code>solutions = filter (good . value) . candidates</code></pre>
 <p>は31ページの「新しい版の candidates は、候補とそれらの値との対からなるリストを返す」の変更に伴って</p>
-<pre><code>solutions = map fst . filter (goot . snd) . candidates</code></pre>
+<pre><code>solutions = map fst . filter (good . snd) . candidates</code></pre>
 <p>これに上記の candidates = foldr expand [] を使うと</p>
-<pre><code>solutions = map fst . filter (goot . snd) . foldr expand []</code></pre>
+<pre><code>solutions = map fst . filter (good . snd) . foldr expand []</code></pre>
+<h3 id="小町算">小町算</h3>
+<h4 id="modify-x-kfte-10kkxfte-10xfte10x1fte"><code>modify x (k,f,t,e) = [(10*k,k*x+f,t,e), (10,x,f*t,e),(10,x,1,f*t+e)]</code></h4>
+<pre><code>k: 数字を数式の一番左に来ている数の先頭桁として付け加えるときの桁を表す数(10の累乗）
+f: 数式の一番左に来ている数
+t: 数式の一番左に来ている数の右に掛け算されている数（掛け算されていないときは 1）
+e: 数式の一番左に来ている掛け算の項の右に足し算されている数（足し算されていないときは 0）</code></pre>
+<p>例えば数式 <code>45*6+7*8+9</code> に対応する (k,f,t,e) は (100,45,6,7*8+9)。</p>
+<p>この数式の左に 3 をおいた数式には次のような三通りがある。</p>
+<pre><code>345*6+7*8+9
+3*45*6+7*8+9
+3+45*6+7*8+9</code></pre>
+<p>それぞれの数式に対応する (k,f,t,e) は以下のようになる。</p>
+<pre><code>345*6+7*8+9 =&gt; (1000,345,6,7*8+9)
+3*45*6+7*8+9 =&gt; (10,3,45*6,7*8+9)
+3+45*6+7*8+9 =&gt; (10,3,1,45*6+7*8+9)</code></pre>
+<p>これがそれぞれ</p>
+<pre><code>(10*k, k*x + f, t, e)
+(10, x, f*t, e)
+(10, x, 1, f*t + e)</code></pre>
+<p>に対応している。</p>
     </div>
   </div>
   <div id="secondary-contents">
