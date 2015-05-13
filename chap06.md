@@ -34,15 +34,15 @@ candidates = foldr expand []
 
 一方、29ページ中の
 ```
-solutions = filter (goot . value) . candidates
+solutions = filter (good . value) . candidates
 ```
 は31ページの「新しい版の candidates は、候補とそれらの値との対からなるリストを返す」の変更に伴って
 ```
-solutions = map fst . filter (goot . snd) . candidates
+solutions = map fst . filter (good . snd) . candidates
 ```
 これに上記の candidates = foldr expand [] を使うと
 ```
-solutions = map fst . filter (goot . snd) . foldr expand []
+solutions = map fst . filter (good . snd) . foldr expand []
 ```
 
 ### 小町算
