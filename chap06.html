@@ -23,12 +23,35 @@ $(function() {
 <div class="structure" id="container">
   <div id="primary-contents">
     <div id="box">
-      
+      <h4 id="小さな理論">小さな理論</h4>
+<h4 id="つの運算を合わせて以下に到達する">2つの運算を合わせて、以下に到達する</h4>
+<pre><code>map (fork (id,value)) . extend' x
+= { 2つの運算を合わせて }
+filter (ok . snd) . zip . cross (extend x, modify x) . fork (map id, map value)
+= { id 挿入 }
+filter (ok . snd) . zip . cross (extend x, modify x) . id . fork (map id, map value)
+= { id = unzip . zip }
+filter (ok . snd) . zip . cross (extend x, modify x) . unzip . zip . fork (map id, map value)
+= { expand x = filter (ok . snd) . zip . cross (extend x, modify x) . unzip とおく }
+expand x . zip . fork (map id, map value)
+= { (6.9) }
+expand x . map (fork (id,value))</code></pre>
+<p>これで31ページ上の「以下を満たす expand を求めなければならない」の</p>
+<pre><code>map (fork (id,value)) . extend' x = expand x . map (fork (id,value))</code></pre>
+<p>が成り立っていることが確認できた。 このときそのすぐ下に書いてあるとおり</p>
+<pre><code>candidates = foldr expand []</code></pre>
+<p>である。</p>
+<p>一方、29ページ中の</p>
+<pre><code>solutions = filter (goot . value) . candidates</code></pre>
+<p>は31ページの「新しい版の candidates は、候補とそれらの値との対からなるリストを返す」の変更に伴って</p>
+<pre><code>solutions = map fst . filter (goot . snd) . candidates</code></pre>
+<p>これに上記の candidates = foldr expand [] を使うと</p>
+<pre><code>solutions = map fst . filter (goot . snd) . foldr expand []</code></pre>
     </div>
   </div>
   <div id="secondary-contents">
     <div id="navigation">
-      Last update: 2014-11-07 <br>
+      Last update: 2015-05-13 <br>
       <a href="index.html">HOME</a><br>
       <a href="errata.html">正誤表</a>(2015-01-17)<br><br>
       解説などすこしずつ追加中
