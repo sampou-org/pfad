@@ -10,14 +10,8 @@ date: 2015-05-13
 ```
 map (fork (id,value)) . extend' x
 = { 2つの運算を合わせて }
-filter (ok . snd) . zip . cross (extend x, modify x) . fork (map id, map value)
-= { id 挿入 }
-filter (ok . snd) . zip . cross (extend x, modify x) . id . fork (map id, map value)
-= { id = unzip . zip }
-filter (ok . snd) . zip . cross (extend x, modify x) . unzip . zip . fork (map id, map value)
+filter (ok . snd) . zip . cross (extend x, modify x) . unzip . map (fork (id,value))
 = { expand x = filter (ok . snd) . zip . cross (extend x, modify x) . unzip とおく }
-expand x . zip . fork (map id, map value)
-= { (6.9) }
 expand x . map (fork (id,value))
 ```
 
