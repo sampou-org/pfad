@@ -28,7 +28,8 @@ main = shelly $ do
 
 deploy :: Sh ()
 deploy = do
-  run_ "cabal" ["run", "pfad", "rebuild"]
+  -- run_ "cabal" ["run", "pfad", "rebuild"]
+  run_ "stack" ["exec", "--", "pfad", "rebuild"]
   git_ "checkout" ["gh-pages"]
 
   files <- lsT "_site"

@@ -21,7 +21,7 @@ main =  hakyllWith config $ do
 
 config :: Configuration
 config = defaultConfiguration
-       { deployCommand = "cabal run deploy"
+       { deployCommand = "stack exec -- deploy" -- "cabal run deploy"
        }
 
 chaps :: [Identifier]
