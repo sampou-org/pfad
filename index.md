@@ -7,8 +7,8 @@ date: 2015-05-21
 
 このサイトは2014年11月にオーム社より発刊されました[『関数プログラミング 珠玉のアルゴリズムデザイン』](http://www.amazon.co.jp/gp/product/4274050645/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=4274050645&linkCode=as2&tag=philoprogramm-22)を楽しむためのサポートサイトです．
 
-<img alt="関数プログラミング 珠玉のアルゴリズムデザイン" src="http://ecx.images-amazon.com/images/I/61uv43I3omL.jpg" height="250px">
-<img alt="Pearls of Functional Algorithm Design" src="http://ecx.images-amazon.com/images/I/51JRG-YGgOL.jpg" height="250px">
+<a href="http://www.amazon.co.jp/gp/product/4274050645/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=4274050645&linkCode=as2&tag=philoprogramm-22"><img alt="関数プログラミング 珠玉のアルゴリズムデザイン" src="http://ecx.images-amazon.com/images/I/61uv43I3omL.jpg" height="250px"></a>
+<a href="http://www.amazon.co.jp/gp/product/0521513383/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=0521513383&linkCode=as2&tag=philoprogramm-22"><img alt="Pearls of Functional Algorithm Design" src="http://ecx.images-amazon.com/images/I/51JRG-YGgOL.jpg" height="250px"></a>
 
 原書カバーの Puzzle no. 234 は ALGORITHM の 9 文字を使った Sudoku パズルになっています．
 
