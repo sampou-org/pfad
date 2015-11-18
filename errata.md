@@ -1,9 +1,12 @@
 ---
 title: 正誤表
-date: 2015-01-17
+date: 2015-11-10
 ---
 
 ## 正誤表
+
+以下は3刷で修正済み
+
 <table id="errata2" class="tablesorter">
  <thead>
   <tr>
@@ -60,7 +63,7 @@ date: 2015-01-17
  </tbody>
 </table>
 
-以下は2刷で修正
+以下は2刷で修正済み
 <table id="errata1" class="tablesorter">
  <thead>
   <tr>
