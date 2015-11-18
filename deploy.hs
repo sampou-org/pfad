@@ -14,7 +14,8 @@ git_ = command1_ "git" []
 main :: IO ()
 main = shelly $ do
   git_ "checkout" ["master"]
-  run_ "cabal" ["run", "pfad", "rebuild"]
+  -- run_ "cabal" ["run", "pfad", "rebuild"]
+  run_ "stack" ["exec", "--", "pfad", "rebuild"]
   git_ "checkout" ["gh-pages"]
 
   files <- lsT "_site"
