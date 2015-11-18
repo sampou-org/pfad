@@ -7,7 +7,8 @@ date: 2015-05-21
 
 このサイトは2014年11月にオーム社より発刊されました[『関数プログラミング 珠玉のアルゴリズムデザイン』](http://www.amazon.co.jp/gp/product/4274050645/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=4274050645&linkCode=as2&tag=philoprogramm-22)を楽しむためのサポートサイトです．
 
-[![関数プログラミング 珠玉のアルゴリズムデザイン](http://ecx.images-amazon.com/images/I/61uv43I3omL.jpg)](http://www.amazon.co.jp/gp/product/4274050645/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=4274050645&linkCode=as2&tag=philoprogramm-22)\[![Pearls of Functional Algorithm Design](http://ecx.images-amazon.com/images/I/51JRG-YGgOL.jpg)](http://www.amazon.co.jp/gp/product/0521513383/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=0521513383&linkCode=as2&tag=philoprogramm-22)
+[![関数プログラミング 珠玉のアルゴリズムデザイン](http://ecx.images-amazon.com/images/I/61uv43I3omL.jpg)](http://www.amazon.co.jp/gp/product/4274050645/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=4274050645&linkCode=as2&tag=philoprogramm-22)\
+[![Pearls of Functional Algorithm Design](http://ecx.images-amazon.com/images/I/51JRG-YGgOL.jpg)](http://www.amazon.co.jp/gp/product/0521513383/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=0521513383&linkCode=as2&tag=philoprogramm-22)
 
 原書カバーの Puzzle no. 234 は ALGORITHM の 9 文字を使った Sudoku パズルになっています．
 
