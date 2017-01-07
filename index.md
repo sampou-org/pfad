@@ -49,10 +49,10 @@ infixr 5 \\
 
 infix 4 ∈, ∉
 
-(∈) ∷ Eq a ⇒ a -> [a] -> Bool
+(∈) ∷ Eq a ⇒ a → [a] → Bool
 (∈) = elem
 
-(∉) ∷ Eq a ⇒ a -> [a] -> Bool
+(∉) ∷ Eq a ⇒ a → [a] → Bool
 (∉) = notElem
 
 infixr 2 ∨
