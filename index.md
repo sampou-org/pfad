@@ -34,6 +34,46 @@ date: 2017-01-07
 演算子以外の構文記号の一部については，GHCの言語拡張``UnicodeSyntax``を有効にするとソースコード中に記述可能です．
 詳細については，[GHCユーザーガイド 9.3.1 Unicode syntax](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#unicode-syntax)をご覧ください．
 
+演算子に関しては，Unicodeの記号が使えますので，たとえば，1章については，以下のような定義モジュールをインポートすれば，そのままコードで表現できます．
+
+```haskell
+{-# LANGUAGE UnicodeSyntax #-}
+module Operators where
+
+import qualified Data.List
+
+infixr 5 \\
+
+(\\) ∷ Eq a ⇒ [a] → [a] → [a]
+(\\) = (Data.List.\\)
+
+infix 4 ∈, ∉
+
+(∈) ∷ Eq a ⇒ a -> [a] -> Bool
+(∈) = elem
+
+(∉) ∷ Eq a ⇒ a -> [a] -> Bool
+(∉) = notElem
+
+infixr 2 ∨
+
+(∨) ∷ Bool → Bool → Bool
+(∨) = (||)
+
+infixr 3 ∧
+
+(∧) ∷ Bool → Bool → Bool
+(∧) = (&&)
+
+infix 4 ≤, ≥
+
+(≤) ∷ Ord a ⇒ a → a → Bool
+(≤) = (<=)
+
+(≥) ∷ Ord a ⇒ a → a → Bool
+(≥) = (>=)
+```
+
 ## 関連記事
 
 読書メモなどを書いていただいた記事など，見つけたもの，教えてもらったもの．
