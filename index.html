@@ -95,6 +95,42 @@ $(function() {
 </tbody>
 </table>
 <p>演算子以外の構文記号の一部については，GHCの言語拡張<code>UnicodeSyntax</code>を有効にするとソースコード中に記述可能です． 詳細については，<a href="https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#unicode-syntax">GHCユーザーガイド 9.3.1 Unicode syntax</a>をご覧ください．</p>
+<p>演算子に関しては，Unicodeの記号が使えますので，たとえば，1章については，以下のような定義モジュールをインポートすれば，そのままコードで表現できます．</p>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">{-# LANGUAGE UnicodeSyntax #-}</span>
+<span class="kw">module</span> <span class="dt">Operators</span> <span class="kw">where</span>
+
+<span class="kw">import qualified</span> <span class="dt">Data.List</span>
+
+<span class="kw">infixr</span> <span class="dv">5</span> \\
+
+(\\) <span class="ot">∷</span> <span class="dt">Eq</span> a <span class="ot">⇒</span> [a] <span class="ot">→</span> [a] <span class="ot">→</span> [a]
+(\\) <span class="fu">=</span> (<span class="dt">Data.List</span><span class="fu">.</span>\\)
+
+infix <span class="dv">4</span> ∈, ∉
+
+(∈) <span class="ot">∷</span> <span class="dt">Eq</span> a <span class="ot">⇒</span> a <span class="ot">-&gt;</span> [a] <span class="ot">-&gt;</span> <span class="dt">Bool</span>
+(∈) <span class="fu">=</span> elem
+
+(∉) <span class="ot">∷</span> <span class="dt">Eq</span> a <span class="ot">⇒</span> a <span class="ot">-&gt;</span> [a] <span class="ot">-&gt;</span> <span class="dt">Bool</span>
+(∉) <span class="fu">=</span> notElem
+
+<span class="kw">infixr</span> <span class="dv">2</span> ∨
+
+(∨) <span class="ot">∷</span> <span class="dt">Bool</span> <span class="ot">→</span> <span class="dt">Bool</span> <span class="ot">→</span> <span class="dt">Bool</span>
+(∨) <span class="fu">=</span> (<span class="fu">||</span>)
+
+<span class="kw">infixr</span> <span class="dv">3</span> ∧
+
+(∧) <span class="ot">∷</span> <span class="dt">Bool</span> <span class="ot">→</span> <span class="dt">Bool</span> <span class="ot">→</span> <span class="dt">Bool</span>
+(∧) <span class="fu">=</span> (<span class="fu">&amp;&amp;</span>)
+
+infix <span class="dv">4</span> ≤, ≥
+
+(≤) <span class="ot">∷</span> <span class="dt">Ord</span> a <span class="ot">⇒</span> a <span class="ot">→</span> a <span class="ot">→</span> <span class="dt">Bool</span>
+(≤) <span class="fu">=</span> (<span class="fu">&lt;=</span>)
+
+(≥) <span class="ot">∷</span> <span class="dt">Ord</span> a <span class="ot">⇒</span> a <span class="ot">→</span> a <span class="ot">→</span> <span class="dt">Bool</span>
+(≥) <span class="fu">=</span> (<span class="fu">&gt;=</span>)</code></pre></div>
 <h2 id="関連記事">関連記事</h2>
 <p>読書メモなどを書いていただいた記事など，見つけたもの，教えてもらったもの．</p>
 <ul>
