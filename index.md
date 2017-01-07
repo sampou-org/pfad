@@ -32,7 +32,7 @@ date: 2017-01-07
 | knows      | `` `knows` ``      |
 
 演算子以外の構文記号の一部については，GHCの言語拡張``UnicodeSyntax``を有効にするとソースコード中に記述可能です．
-[GHCユーザーガイド](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#unicode-syntax)
+詳細については，[GHCユーザーガイド 9.3.1 Unicode syntax](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#unicode-syntax)をご覧ください．
 
 ## 関連記事
 
