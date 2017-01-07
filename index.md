@@ -14,16 +14,22 @@ date: 2017-01-07
 
 ## 演算子記号とASCII文字列との対応
 
-| 本書の記号 | HaskellのASCII文字 | 本書の記号 | HaskellのASCII文字 |
-|:----------:|:------------------:|:----------:|:------------------:|
-| $\le$      | `<=`               | $\ge$      | `>=`               |
-| $\vee$     | `||`               | $\wedge$   | `&&`               |
-| $\cdot$    | `.`                | $\neq$     | `/=`               |
-| $\in$      | `` `elem` ``       | $\notin$   | `` `notElem` ``    |
-| $\sqsubseteq$ | `` `isPrefixOf` `` | $\lambda$ | `` \ ``          |
-| div        | `` `div` ``        | mod        | `` `mod` ``        |
-| min        | `` `min` ``        | max        | `` `max` ``        |
-| knows      | `` `knows` ``      |            |                    |
+| 本書の記号 | HaskellのASCII文字 |
+|:----------:|:------------------:|
+| $\le$      | `<=`               |
+| $\ge$      | `>=`               |
+| $\vee$     | `||`               |
+| $\wedge$   | `&&`               |
+| $\cdot$    | `.`                |
+| $\neq$     | `/=`               |
+| $\in$      | `` `elem` ``       |
+| $\notin$   | `` `notElem` ``    |
+| $\sqsubseteq$ | `` `isPrefixOf` `` |
+| div        | `` `div` ``        |
+| mod        | `` `mod` ``        |
+| min        | `` `min` ``        |
+| max        | `` `max` ``        |
+| knows      | `` `knows` ``      |
 
 演算子以外の構文記号の一部については，GHCの言語拡張``UnicodeSyntax``を有効にするとソースコード中に記述可能です．
 [GHCユーザーガイド](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#unicode-syntax)
