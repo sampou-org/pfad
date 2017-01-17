@@ -23,12 +23,101 @@ $(function() {
 <div class="structure" id="container">
   <div id="primary-contents">
     <div id="box">
-      
+      <h2 id="cols-の対合性">cols の対合性</h2>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="ot">cols ::</span> [[a]] <span class="ot">-&gt;</span> [[a]]
+cols [xs]     <span class="fu">=</span> map (<span class="fu">:</span>[]) xs
+cols (xs<span class="fu">:</span>xss) <span class="fu">=</span> zipWith (<span class="fu">:</span>) xs (cols xss)</code></pre></div>
+<p><code>cols (cols xss) = xss</code> <code>xss</code>上の帰納法</p>
+<p><code>[[x]]</code>の場合</p>
+<pre><code>  cols (cols [[x]])
+=   { cols の定義 }
+  cols (map (:[]) [x])
+=   { map の定義 }
+  cols ([x] : map (:[]) [])
+=   { map の定義 }
+  cols ([x] : [])
+=   { リストの記法 }
+  cols [[x]]
+=   { 同様の運算を繰り返す }
+  [[x]]</code></pre>
+<p><code>[x:xs]</code>の場合</p>
+<pre><code>  cols (cols [x:xs])
+=   { colsの定義 }
+  cols (map (:[]) (x:xs))
+=   { map の定義 }
+  cols ([x] : map (:[]) xs))
+=   { cols の定義 }
+  cols ([x] : cols [xs])
+=   { cols の定義 }
+  zipWith (:) [x] (cols (cols [xs]))
+=   { 帰納法の仮定 }
+  zipWith (:) [x] [xs]
+=   { zipWith の定義 }
+  [x:xs]</code></pre>
+<p><code>xs:xss</code>の場合</p>
+<pre><code>  cols (cols (xs:xss))
+=   { cols の定義 }
+  cols (zipWith (:) xs (cols xss))
+=   { zipWith (:) xs = zipWith (++) (map (:[]) xs) であるから }
+  cols (zipWith (++) (map (:[]) xs) (cols xss))
+=   { cols の定義 }
+  cols (zipWith (++) (cols [xs]) (cols xss))
+=   { zipWith (++) = (⊕) とする }
+  cols (cols [xs] ⊕ cols xss)
+=   { 補題: cols (xss ⊕ yss) = cols xss ++ cols yss }
+  cols (cols [xs]) ++ cols (cols xss)
+=   { 帰納法の仮定 }
+  [xs] ++ xss
+=   { (++) の定義 }
+  xs:xss</code></pre>
+<h2 id="補題">補題</h2>
+<pre><code>cols (xss ⊕ yss) = cols xss ++ cols yss
+  where
+    (⊕) = zipWith (++)</code></pre>
+<p>この補題には以下の付帯条件がある．</p>
+<pre><code>  (1) 0 &lt; length xss = length yss
+  (2) 0 &lt; lenght (head xss)
+  (3) 0 &lt; length (head yss)
+  (4) all (length (head xss) ==) xss
+  (5) all (length (head yss) ==) xss</code></pre>
+<p>証明は<code>xss</code>上の帰納法による</p>
+<p><code>[xs]</code>の場合 付帯条件(1)より<code>yss = [ys]</code></p>
+<pre><code>  cols ([xs] ⊕ [ys])
+=   { ⊕ の定義 }
+  cols (zipWith (++) [xs] [ys])
+=   { zipWith の定義 }
+  cols ((xs++ys) : zipWith (++) [] [])
+=   { zipWith の定義 }
+  cols ((xs++ys):[])
+=   { リストの記法 }
+  cols [xs++ys]
+=   { cols 定義 }
+  map (:[]) (xs++ys)
+=   { map-++ 則 }
+  map (:[]) xs ++ map (:[]) ys
+=   { cols の定義 }
+  cols xs ++ cols ys</code></pre>
+<p><code>(xs:xss)</code>の場合 付帯条件(1)より<code>yss</code>は<code>ys : yss</code>と表せる</p>
+<pre><code>  cols ((xs:xss) ⊕ (ys:yss))
+=   { ⊕ の定義 }
+  cols (zipWith (++) (xs:xss) (ys:yss))
+=   { zipWith の定義 }
+  cols ((xs++ys) : zipWith (++) xss yss)
+=   { ⊕ の定義 }
+  cols ((xs++ys) : (xss ⊕ yss))
+=   { cols の定義 }
+  zipWith (:) (xs++ys) (cols (xss ⊕ yss))
+=   { 帰納法の仮定より }
+  zipWith (:) (xs++ys) (cols xss ++ cols yss)
+=   { 付帯条件 (4) より length xs = length (cols xss) なので }
+  zipWith (:) xs (cols xss) ++ zipWith (:) ys (cols yys)
+=   { cols の定義より }
+  cols (xs:xss) ++ cols (ys:yss)</code></pre>
     </div>
   </div>
   <div id="secondary-contents">
     <div id="navigation">
-      Last update: 2014-11-07 <br>
+      Last update: 2017-01-17 <br>
       <a href="index.html">HOME</a><br>
       <a href="errata.html">正誤表</a>(2015-01-17)<br><br>
       解説などすこしずつ追加中
