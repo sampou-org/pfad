@@ -100,7 +100,7 @@ solve     =   search . choices
 
 
 search :: Matrix Choices -> [Grid]
-search m  |   not (safe m)   =  []
+search m  |   not (safe m')  =  []
           |   complete m'    =  [map (map head) m']
           |   otherwise      =  concat (map search (expand1 m'))
               where  m' = prune m
