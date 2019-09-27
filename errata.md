@@ -1,9 +1,40 @@
 ---
 title: 正誤表
-date: 2015-11-10
+date: 2019-09-27
 ---
 
 ## 正誤表
+
+<table id="errata2" class="tablesorter">
+ <thead>
+  <tr>
+   <th>ページ</th>
+   <th>報告日</th>
+   <th>内容</th>
+  </tr>
+ </thead>
+ <tbody>
+<!--
+  <tr>
+   <td></td>
+   <td>2019/09/27</td>
+   <td>
+    誤：
+    正：
+   </td>
+  </tr>
+-->
+  <tr>
+   <td>p.139 searchの定義1行目</td>
+   <td>2019/09/27</td>
+   <td>
+    誤： not (safe m)
+    正： not (safe m')
+   </td>
+  </tr>
+ </tbody>
+</table>
+
 
 以下は3刷で修正済み
 
