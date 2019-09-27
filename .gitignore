@@ -11,3 +11,5 @@ _site/
 .cabal-sandbox/
 cabal.sandbox.config
 .shelly/
+*.lock
+.stack-work/
