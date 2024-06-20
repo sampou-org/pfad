@@ -44,7 +44,7 @@ solutions1 = map fst . filter (good . snd) . foldr expand1 []
 expand1 :: Datum -> [(Candidate, Value)] -> [(Candidate, Value)]
 expand1 x = filter (ok . snd) . zipp . cross (extend x, modify x) . unzip
 
--- modify      ::  Value -> [Value]
+modify      ::  Datum -> [Value] -> [Value]
 modify      =   undefined
 
 -- Making Century
@@ -116,8 +116,15 @@ type Value'    = (Value,Value,Value,Value)
 value' :: Candidate -> Value'
 value' ((xs:xss):xsss) = (10^length xs,valFact xs,valTerm xss,valExpr xsss)
 
-modify' :: Datum -> Value' -> [Value']
-modify' x (k,f,t,e) = [(10*k,k*x+f,t,e),(10,x,f*t,e),(10,x,1,f*t+e)]
+modify' :: Datum -> [Value'] -> [Value']
+modify' x [] = [(10, x, 1, 0)]
+modify' x vs = concatMap (glueValue x) vs
+
+glueValue :: Digit -> Value' -> [Value']
+glueValue x (k,f,t,e) = [(10*k,k*x+f,t,e)
+                        ,(10,x,f*t,e)
+                        ,(10,x,1,f*t+e)
+                        ]
 
 good' :: Value -> Value' -> Bool
 good' c (k,f,t,e) = f*t+e == c
@@ -129,7 +136,7 @@ solutions' :: Value -> Data -> [Candidate]
 solutions' c = map fst . filter (good' c . snd) . foldr (expand' c) []
 
 expand'0 :: Datum -> Datum -> [(Candidate, Value')] -> [(Candidate, Value')]
-expand'0 c x = filter (ok' c . snd) . zipp . cross (extend x, modify x) . unzip
+expand'0 c x = filter (ok' c . snd) . zipp . cross (extend x, modify' x) . unzip
 
 expand'          ::  Datum -> Datum -> [(Candidate,Value')] -> [(Candidate,Value')] 
 expand' c x []   =   [([[[x]]],(10,x,1,0))]
