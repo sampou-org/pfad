@@ -50,7 +50,7 @@ $(function() {
 <td>2021/11/08</td>
 <td>
 <pre><code>誤：modify x (k,f,t,e) =
-  ...
+      ...
 正：modify x [] = [(10, x, 1, 0)]
     modify x vs = concatMap (glueValue x) vs
         where glueValue x (k,f,t,e) = [(10*k,k*x+f,t,e),(10,x,f*t,e),(10,x,1,f*t+e)]</code></pre>
