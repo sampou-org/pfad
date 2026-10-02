@@ -5,6 +5,7 @@
 <link rel="stylesheet" type="text/css" href="css/default.css">
 <link rel="stylesheet" type="text/css" href="css/syntax.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<!--
 <script type="text/javascript" src="./js/jquery-latest.js"></script>
 <script type="text/javascript" src="./js/jquery.tablesorter.min.js"></script>
 <script type="text/javascript">
@@ -14,6 +15,7 @@ $(function() {
   $("#errata3").tablesorter({headers: {2: {sorter: false}}});
 });
 </script>
+-->
 <title>正誤表</title>
 </head>
 <body>
@@ -43,6 +45,17 @@ $(function() {
    </td>
   </tr>
 -->
+<tr>
+<td>p.35 5-6行目の modify の定義</td>
+<td>2021/11/08</td>
+<td>
+<pre><code>誤：modify x (k,f,t,e) =
+  ...
+正：modify x [] = [(10, x, 1, 0)]
+    modify x vs = concatMap (glueValue x) vs
+        where glueValue x (k,f,t,e) = [(10*k,k*x+f,t,e),(10,x,f*t,e),(10,x,1,f*t+e)]</code></pre>
+</td>
+</tr>
 <tr>
 <td>p.35 12行目のexpand の定義左辺</td>
 <td>2021/11/07</td>
